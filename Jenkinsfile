@@ -1,13 +1,13 @@
 pipeline {
   
      agent any 
-  stage('Build') {
+  stages('Build') {
     steps{
         sh '/home/diallo/Téléchargements/maven/bin/mvn clean install'
     }
     
   }
-  stage('Test'){
+  stages('Test'){
     steps{
       sh '/home/diallo/Téléchargements/maven/bin/mvn test'
          
